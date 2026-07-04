@@ -69,9 +69,9 @@ export function GameBoard({ onRestart }: GameBoardProps) {
     >
       {cells}
       {status === 'gameOver' && (
-        <div className={styles.overlay} role="alert" aria-live="assertive">
+        <div className={styles.overlay} role="alert" aria-label="Game Over" aria-live="assertive">
           <h2>Game Over</h2>
-          <p>Final Score: {10}</p>
+          <p>Final Score: {score}</p>
           <button className={styles.restartBtn} onClick={onRestart}>
             Restart
           </button>
