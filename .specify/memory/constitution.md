@@ -1,50 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Snake Game Constitution
+<!-- Project constitution for the browser-based Snake Game -->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Architecture First
+Use a feature-based folder structure. Keep game engine logic strictly separate from UI rendering layers. Ensure Redux state remains serializable, predictable, and minimal, separating presentational components from stateful orchestration.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Deterministic Gameplay
+Snake movement, collision detection, food spawning, score updates, and game lifecycle (pause/resume/restart) MUST be deterministic and testable. No hidden side effects are allowed inside React components; time-based loop logic MUST be centralized.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Redux Discipline
+Use Redux Toolkit for store, slices, and actions. Store only essential game state in Redux; avoid storing derived UI values. Use selectors to compute score, speed, game status, and board rendering inputs.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Routing and UX
+Use React Router for app-level navigation (Home, Game, Results). Keyboard-first gameplay is mandatory. The UI MUST clearly communicate score, current state, controls, and restart options.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Quality and Maintainability
+Prioritize TypeScript or clean JavaScript with strict linting. Add unit tests for reducers, selectors, and core game utility functions. Keep components small, reusable, and accessible; favor readability over cleverness.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### VI. Performance
+Prevent unnecessary re-renders during game ticks. Ensure board rendering is highly efficient for repeated updates. Minimize dependencies to the core stack: React, Vite, Redux Toolkit, and React Router.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### VII. Accessibility
+Ensure visible focus states and provide clear instructions for controls. Do not rely on color alone to indicate game state; support keyboard interaction for all major actions.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### VIII. Delivery Standards
+The final application must run locally via Vite dev server with a clean, error-free build. Include a comprehensive `README.md` covering setup, controls, architecture summary, and future enhancements.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Technical Standards & Performance
+
+The project follows a strict separation of concerns between the game engine and the React UI. Performance is prioritized by minimizing re-renders during high-frequency game ticks and keeping the dependency tree lightweight.
+
+## UX, Accessibility, and Delivery
+
+The user experience is centered around keyboard-driven gameplay and clear visual feedback. Accessibility is a core requirement, ensuring that the game state is communicated through more than just color and that all interactions are keyboard-accessible.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+<!-- Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+All development MUST align with these principles. Any deviation due to technical constraints must be documented and justified in the feature specification or implementation plan.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-07-05 | **Last Amended**: 2026-07-05
