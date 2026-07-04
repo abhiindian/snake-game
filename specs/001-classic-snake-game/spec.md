@@ -104,11 +104,11 @@ As a player, I want to pause the game so I can temporarily stop playing.
 - **FR-002**: The application MUST provide a game screen displaying the board, current score, game status (Playing/Paused/Game Over), and control instructions.
 - **FR-003**: The snake MUST begin at a default starting position and direction (e.g., center of the board, moving right).
 - **FR-004**: Food MUST spawn randomly on an unoccupied board cell.
-- **FR-005**: Movement MUST occur at a fixed interval (game tick) while the game is in the 'Playing' state.
+- **FR-005**: Movement MUST occur at a fixed interval (game tick, e.g., 100ms) while the game is in the 'Playing' state.
 - **FR-006**: The system MUST prevent invalid immediate reversals (e.g., if moving Up, pressing Down is ignored).
 - **FR-007**: Eating food MUST increase the score and increase the snake's length by one cell.
 - **FR-008**: Game Over MUST be triggered upon wall collision or self-collision.
-- **FR-009**: The application MUST allow the player to restart the game from the 'Game Over' state.
+- **FR-009**: The application MUST allow the player to restart the game from the 'Game Over' state via a visible 'Restart' button.
 - **FR-010**: The application MUST support pausing and resuming the game during active play.
 
 ### Non-Functional Requirements

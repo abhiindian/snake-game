@@ -97,6 +97,9 @@
 ## Final Phase: Polish & Cross-Cutting Concerns
 
 - [ ] T025 Implement responsive styling using CSS Modules
-- [ ] T026 Add accessibility features (aria labels, keyboard focus states)
+- [ ] T026 Implement handling for window focus loss (e.g., automatically pausing the game)
+- [ ] T027 Add accessibility features (aria labels, keyboard focus states)
+- [ ] T028 Write integration tests for the full game flow in `tests/integration/`
+- [ ] T029 Finalize `README.md` with setup, controls, and architecture documentation
 - [ ] T027 Write integration tests for the full game flow in `tests/integration/`
 - [ ] T028 Finalize `README.md` with setup, controls, and architecture documentation

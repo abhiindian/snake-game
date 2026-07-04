@@ -30,6 +30,8 @@ Build a responsive, browser-based Snake Game using React and Redux Toolkit. The 
 
 **Scale/Scope**: Single feature implementation (Classic Snake).
 
+**Grid Dimensions**: 40x40 grid.
+
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
