@@ -1,0 +1,48 @@
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.scoreSection {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00b894;
+}
+
+.statusSection {
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.status.paused {
+  color: #fdcb6e;
+}
+
+.status.gameOver {
+  color: #e74c3c;
+  font-weight: 600;
+}

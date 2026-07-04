@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instructions {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.instructions p {
+  margin: 0.25rem 0;
+}
+
+.instructions kbd {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85rem;
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}

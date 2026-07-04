@@ -1,0 +1,94 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(40, 1fr);
+  background-color: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cell {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.empty {
+  background-color: transparent;
+}
+
+.snake {
+  background-color: #00b894;
+  border-radius: 2px;
+}
+
+.snake-head {
+  background-color: #00cec9;
+  border-radius: 3px;
+  box-shadow: 0 0 4px rgba(0, 206, 201, 0.5);
+}
+
+.food {
+  background-color: #fd79a8;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(253, 121, 168, 0.6);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.overlay h2 {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.restartBtn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.restartBtn:hover {
+  transform: scale(1.05);
+}
+
+.restartBtn:focus-visible {
+  outline: 3px solid #fdcb6e;
+  outline-offset: 3px;
+}
