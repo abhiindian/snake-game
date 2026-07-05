@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { CELL_SIZE, GRID_WIDTH, GRID_HEIGHT } from '@/utils/constants'
+import { GRID_WIDTH, GRID_HEIGHT } from '@/utils/constants'
 import type { Position } from '@/utils/gameEngine'
 import type { RootState } from '@/store'
 import styles from './GameBoard.module.css'
@@ -61,10 +61,6 @@ export function GameBoard({ onRestart }: GameBoardProps) {
   return (
     <div
       className={styles.board}
-      style={{
-        width: GRID_WIDTH * CELL_SIZE,
-        height: GRID_HEIGHT * CELL_SIZE,
-      }}
       role="grid"
       aria-label="Snake game board"
     >

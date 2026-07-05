@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .scoreSection {
@@ -15,16 +16,17 @@
 }
 
 .label {
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
   color: #888;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .value {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   color: #00b894;
+  white-space: nowrap;
 }
 
 .statusSection {
@@ -33,7 +35,7 @@
 }
 
 .status {
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
   color: #aaa;
   font-weight: 500;
 }

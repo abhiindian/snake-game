@@ -52,6 +52,8 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to play.
 
 ## Controls
 
+### Keyboard (Desktop)
+
 | Key | Action |
 |-----|--------|
 | `↑` / `W` | Move Up |
@@ -59,6 +61,23 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to play.
 | `←` / `A` | Move Left |
 | `→` / `D` | Move Right |
 | `Space` | Pause / Resume |
+
+### Touch Controls (Mobile)
+
+On phones and tablets, on-screen directional buttons appear below the game board:
+
+- **D-Pad buttons**: Tap ▲ ▼ ◀ ▶ to control the snake
+- **Action bar**: Use Pause/Resume, Restart, and Home buttons at the top of the screen
+- All touch controls meet 44×44px minimum tappable area for comfortable one-handed play
+
+## Responsive Design
+
+The game is fully responsive and works across all screen sizes (320px minimum viewport):
+
+- **Portrait mode**: Vertical stack layout (ActionBar → Scoreboard → Board → TouchControls)
+- **Landscape mode** (768px+): Side-by-side grid layout (ActionBar on top, board and controls side by side)
+- **Board scaling**: The game board maintains a perfect 1:1 aspect ratio and scales fluidly using CSS `aspect-ratio`
+- **No horizontal scrolling**: Layout adapts to any viewport width without overflow
 
 ## Project Structure
 
@@ -162,6 +181,23 @@ Run all tests:
 ```bash
 npm run test
 ```
+
+### Manual QA for Mobile
+
+Test the mobile-friendly UI in browser DevTools:
+
+1. Open the dev server: `npm run dev`
+2. Open DevTools (F12) → Toggle device toolbar (Ctrl+Shift+M)
+3. Select device presets: iPhone SE (375px), iPhone 12 Pro (390px), iPad (768px)
+4. Verify:
+   - Touch D-pad buttons appear below the board
+   - Action bar shows at the top with score, status, and action buttons
+   - Board scales to fit the viewport while maintaining square aspect ratio
+   - No horizontal scrolling at any viewport width
+   - Pause/Resume, Restart, and Home buttons function correctly
+   - Game over overlay is readable and tappable
+5. Rotate device to test landscape layout (side-by-side grid)
+6. Verify keyboard controls still work by switching back to desktop viewport
 
 ## Game Specifications
 
