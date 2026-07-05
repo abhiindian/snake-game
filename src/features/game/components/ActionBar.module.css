@@ -1,0 +1,91 @@
+.actionBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.score {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 700;
+  color: #00b894;
+  white-space: nowrap;
+}
+
+.status {
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  color: #aaa;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status--paused {
+  color: #fdcb6e;
+}
+
+.status--gameOver {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.actionBar__button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.actionBar__button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.actionBar__button:focus-visible {
+  outline: 3px solid #fdcb6e;
+  outline-offset: 2px;
+}
+
+.actionBar__button--secondary {
+  background: rgba(231, 76, 60, 0.2);
+  border-color: rgba(231, 76, 60, 0.4);
+}
+
+.actionBar__button--secondary:hover {
+  background: rgba(231, 76, 60, 0.4);
+}
+
+.actionBar__button--icon {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 360px) {
+  .actionBar {
+    gap: 0.35rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .actionButtons {
+    gap: 0.35rem;
+  }
+}

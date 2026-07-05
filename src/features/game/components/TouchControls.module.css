@@ -1,0 +1,71 @@
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0.75rem auto;
+}
+
+.dpad__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dpad__button:active {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(0.95);
+}
+
+.dpad__button:focus-visible {
+  outline: 3px solid #fdcb6e;
+  outline-offset: 3px;
+}
+
+.dpad__button--up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.dpad__button--left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.dpad__button--down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.dpad__button--right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+@media (max-width: 360px) {
+  .dpad__button {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .dpad {
+    gap: 6px;
+  }
+}
