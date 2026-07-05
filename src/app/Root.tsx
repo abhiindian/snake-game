@@ -6,7 +6,7 @@ import './Root.css'
 
 function Root() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Provider store={store}>
         <RoutesComponent />
       </Provider>
