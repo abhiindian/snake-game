@@ -34,6 +34,7 @@ export function GameBoard({ onRestart }: GameBoardProps) {
   const snake = useSelector((state: RootState) => state.game.snake)
   const food = useSelector((state: RootState) => state.game.food)
   const status = useSelector((state: RootState) => state.game.status)
+  const score = useSelector((state: RootState) => state.game.score)
 
   const cells = []
   for (let y = 0; y < GRID_HEIGHT; y++) {
